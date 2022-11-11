@@ -1,0 +1,52 @@
+1. user side: username, password, email, state
+2. after login gains access to put emergency
+3. emergency name, decription, location and state
+
+
+documentation
+----------------------------------------------------------------------------------------------------------------
+/ --get
+{access:true, error,list:[{
+	Name, Description, Flocation, State,Level,Date, userId
+}]
+
+-----------------------------------------------------------------------------------------------------------------
+
+/register -- post
+
+inputes:
+username >=3
+email>=5
+password>=6
+location>=6
+state>=2
+description>=10
+
+{
+access: bool,
+error: false or error
+input: bool,
+user:{
+	main:{
+		Username, Email, Password, verified
+	}, 
+	others:{
+		FLocation, State, description
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------
+
+/login -- post
+
+input:
+email>=5
+password>=6
+
+{
+	access,error,input, email, password-- bool,
+	user:{
+		Username, Email, Password, verified
+	}
+}
