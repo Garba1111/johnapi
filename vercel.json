@@ -1,0 +1,16 @@
+{
+    "version":2,
+    "name":"emergency",
+    "builds":[
+        {
+            "src":"App.js",
+            "dest":"/App.js"
+        }
+    ],
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"/App.js"
+        }
+    ]
+}
